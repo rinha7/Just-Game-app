@@ -28,7 +28,20 @@ void Widget::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
 {
     QListWidgetItem *s = ui->listWidget->currentItem();
     QString st = s->text();
-    ui->tabWidget->addTab(new GameForm(nullptr,st,"desc","notes"),st);
+
+    //set gamepage
+    //if there are opened page, tab cursor will move to there
+    // else, add tab
+    bool gameopen = false;
+    for(int i;i<ui->tabWidget->count();i++){
+        if(ui->tabWidget->tabText(i) == st){
+            gameopen = true;
+            ui->tabWidget->setCurrentIndex(i);
+            break;
+        }
+    }
+    if (gameopen == 0) ui->tabWidget->addTab(new GameForm(nullptr,st,"desc","notes"),st);
+
 
 }
 
