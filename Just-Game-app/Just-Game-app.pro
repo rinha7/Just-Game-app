@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-01-28T16:58:25
+# Project created by QtCreator 2019-01-27T14:10:09
 #
 #-------------------------------------------------
 
@@ -26,13 +26,16 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        widget.cpp \
+    gameform.cpp
 
 HEADERS += \
-        widget.h
+        widget.h \
+    gameform.h
 
 FORMS += \
-        widget.ui
+        widget.ui \
+    gameform.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
