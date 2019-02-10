@@ -11,6 +11,7 @@ GameForm::GameForm(QWidget *parent, QString gname, QString gdesc, QString gnotes
     QWidget (parent),
     ui(new Ui::GameForm){
     ui->setupUi(this);
+
     ui->gamename->setText(gname);
     ui->gamedescription->setText(gdesc);
     ui->gamelog->setText(gnotes);

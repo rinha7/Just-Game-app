@@ -33,47 +33,18 @@ void Widget::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
     //if there are opened page, tab cursor will move to there
     // else, add tab
     bool gameopen = false;
-    for(int i;i<ui->tabWidget->count();i++){
+    for(int i=0;i<ui->tabWidget->count();i++){
         if(ui->tabWidget->tabText(i) == st){
             gameopen = true;
             ui->tabWidget->setCurrentIndex(i);
             break;
         }
     }
-    if (gameopen == 0) ui->tabWidget->addTab(new GameForm(nullptr,st,"desc","notes"),st);
+    if (gameopen == 0) ui->tabWidget->addTab(new GameForm(nullptr,st,"description","notes"),st);
 
 
 }
 
-void Widget::on_recentGame1_clicked()
-{
-    ui->tabWidget->addTab(new GameForm(nullptr,ui->recentGame1->text(),"desc","notes"),ui->recentGame1->text());
-}
-void Widget::on_recentGame2_clicked()
-{
-    ui->tabWidget->addTab(new GameForm(nullptr,ui->recentGame2->text(),"desc","notes"),ui->recentGame2->text());
-
-}
-void Widget::on_recentGame3_clicked()
-{
-    ui->tabWidget->addTab(new GameForm(nullptr,ui->recentGame3->text(),"desc","notes"),ui->recentGame3->text());
-
-}
-void Widget::on_recentGame4_clicked()
-{
-    ui->tabWidget->addTab(new GameForm(nullptr,ui->recentGame4->text(),"desc","notes"),ui->recentGame4->text());
-
-}
-void Widget::on_recentGame5_clicked()
-{
-    ui->tabWidget->addTab(new GameForm(nullptr,ui->recentGame5->text(),"desc","notes"),ui->recentGame5->text());
-    ;
-}
-void Widget::on_recentGame6_clicked()
-{
-    ui->tabWidget->addTab(new GameForm(nullptr,ui->recentGame6->text(),"desc","notes"),ui->recentGame6->text());
-
-}
 
 void Widget::on_tabWidget_tabCloseRequested(int index)
 {
