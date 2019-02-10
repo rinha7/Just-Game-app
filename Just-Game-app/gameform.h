@@ -1,3 +1,5 @@
+//gameform.h is form that displaying game's name, description, update log in new tab
+
 #ifndef GAMEFORM_H
 #define GAMEFORM_H
 

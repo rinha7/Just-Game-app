@@ -1,3 +1,5 @@
+// widget.h is for MainWindow Page widget
+
 #ifndef WIDGET_H
 #define WIDGET_H
 

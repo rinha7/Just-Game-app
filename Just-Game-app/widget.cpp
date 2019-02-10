@@ -18,11 +18,11 @@ Widget::Widget(QWidget *parent) :
     ui->tabWidget->removeTab(1);
 
 }
+
 Widget::~Widget()
 {
     delete ui;
 }
-
 
 void Widget::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
 {
@@ -41,10 +41,7 @@ void Widget::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
         }
     }
     if (gameopen == 0) ui->tabWidget->addTab(new GameForm(nullptr,st,"description","notes"),st);
-
-
 }
-
 
 void Widget::on_tabWidget_tabCloseRequested(int index)
 {
