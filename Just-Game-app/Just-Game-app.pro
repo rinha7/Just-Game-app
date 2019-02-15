@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql concurrent network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,18 +24,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
+QT       += core
+QT       += network
+
 SOURCES += \
         main.cpp \
         widget.cpp \
-    gameform.cpp
+    gameform.cpp \
+    rest.cpp \
+    logindialog.cpp \
+    registerdialog.cpp
 
 HEADERS += \
         widget.h \
-    gameform.h
+    gameform.h \
+    rest.h \
+    logindialog.h \
+    registerdialog.h
 
 FORMS += \
         widget.ui \
-    gameform.ui
+    gameform.ui \
+    logindialog.ui \
+    registerdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
